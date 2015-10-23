@@ -1,0 +1,136 @@
+/* Home Page */
+
+	.lp_splash_container {
+		position: relative;
+		font-family: 'Raleway', Arial;
+		height:614px;
+		background-image:url(../images/WHP_splash.png);
+		background-repeat:no-repeat;
+		background-position:center;
+	}
+
+		.splash_tagline {
+			clear: both;
+			color:#c9764a;
+			font-size:30px;
+			text-align:left;
+			margin-left:45%;
+			margin-top:50px;
+		}
+			
+
+			span {
+				font-size:22px;
+				color:#797979;	
+			}
+
+
+		.overlay-text {
+			position: absolute;
+			height:214px;
+			width:100%;
+			background:none;
+			text-align:center;
+			font-size:21px;
+			color:#797979; 
+			z-index: 5; 
+			top:353px;
+		}
+			
+			span {
+				font-size:22px;
+				color:#797979;
+			}
+
+		.overlay-background {
+		  position:absolute;
+			top:353px;
+			height:214px;
+			width:100%;
+			z-index:3;
+			background-color:#FFF;
+			opacity:0.8;
+			text-align:center;
+			overflow: hidden;
+		}
+		
+		.overlay-block {
+			width:250px;
+			display:inline-block;
+			font-size:14px;
+			margin: 3em 3em;
+			vertical-align: text-top;
+
+			span {
+				font-size:30px;
+				font-family:'Oswald';
+			}
+
+.home-centered-blocks .no-decoration:hover {
+	text-decoration: none;
+}
+
+.home-centered-blocks {
+	font-family: 'Raleway', Arial;
+}
+
+.home-centered-blocks h2 {
+	color: #125088;
+	font-size: 24px;
+}
+
+.home-centered-blocks p {
+	color: #000000;
+	font-size: 16px;
+}
+
+/* TODO: Scope centered-blocks to be shared */
+.centered-blocks {
+	max-width: 1200px;
+	overflow: hidden;
+	margin: 50px auto;
+	
+}
+
+.centered-blocks img {
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.centered-blocks .row {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.centered-blocks .col-xs-3	{
+  margin: 0 !important;
+	padding: 10px !important;
+	width: 25% !important;
+}
+
+.centered-blocks .col-xs-4	{
+  margin: 0 !important;
+	padding: 10px !important;
+	width: 33.33333333333333% !important;
+}
+
+.centered-blocks .col-xs-3:hover,
+.centered-blocks .col-xs-4:hover{
+	background-color: #eee;
+	cursor: pointer;
+	border-radius: 3px;
+}
+
+.centered-blocks h3 {
+	font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #125088;
+}
+
+.centered-blocks p {
+	font-size: 16px;
+  text-align: justify;
+}
+
+

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- <meta charset="ISO-8859-1"> -->
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<title>Hosting Services Portal</title>
+<meta name="description" content=""/>
+<meta name="author" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
+<title>JQuery Test</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap/css/bootstrap-theme.css">
+<link rel="stylesheet" type="text/css" href="css/navbar.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="lib/jquery-2.1.4.min.js"></script>
+<script src="css/bootstrap/js/bootstrap.js"></script>
+
+<!-- <script src="//code.jquery.com/jquery-1.11.3.min.js"></script> -->
+<!-- <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+
+<script>
+	$(document).ready(function(){
+		console.log("hello");
+		$("#btnClick").click(function(){
+			console.log("hello1");
+			$("#myPara").css("background-color", "pink");
+		})
+	})
+</script>
+
+</head>
+<body>
+
+<div id="hsp-nav">
+  <nav class="primary-navbar navbar navbar-primary container-fluid"
+       ng-class="{analyticsnavbar: navbar.$state.includes('analytics'), productsnavbar: navbar.$state.includes('products'), resourcesnavbar: navbar.$state.includes('resources')}">
+    <a class="navbar-brand navbar-left navbar-secondary" ui-sref="analytics.overview">
+      <img src="images/northstar.png"/>
+      DTSS NORTHSTAR
+    </a>
+    <ul class="navbar-tabs list-inline list-unstyled">
+      <li class="" ng-class="{active: navbar.$state.includes('products')}">
+        <a ui-sref="products.overview">
+          <img ng-show="!navbar.$state.includes('products')" src="images/products_icon.png">
+          <img ng-show="navbar.$state.includes('products')" src="images/products_icon_current.png">
+          Products
+        </a>
+      </li>
+      <li class="" ng-class="{active: navbar.$state.includes('analytics')}" >
+        <a ui-sref="analytics.overview">
+          <img ng-show="!navbar.$state.includes('analytics')" src="images/analytics_icon.png">
+          <img ng-show="navbar.$state.includes('analytics')" src="images/analytics_icon_current.png">
+          Analytics
+        </a>
+      </li>
+<!--
+      <li class="" ng-class="{active: navbar.$state.includes('resources')}">
+        <a  ui-sref="resources">
+          <img ng-show="!navbar.$state.includes('resources')" src="images/resources_icon.png">
+          <img ng-show="navbar.$state.includes('resources')" src="images/resources_icon_current.png">
+          Resources
+        </a>
+      </li>
+-->
+    </ul>
+    <ul class="nav navbar-nav navbar-right navbar-secondary">
+      <li class="dropdown">
+         <a class="dropdown-toggle" data-toggle="dropdown">
+          <img src="images/avatar.png" class="module_icons" />
+          <span ng-show="!navbar.user">Sign in to Lighthouse</span><span ng-show="navbar.user">{{ navbar.user }}<i class="caret"></i></span></a>
+        <ul class="dropdown-menu">
+          <li>
+            <a>
+              <i class="fa fa-cog"></i>
+              Settings
+            </a>
+          </li>
+          <li>
+            <a ng-show="!navbar.user" ng-click="navbar.login()">
+              <i class="fa fa-sign-out"></i> Login
+            </a>
+            <a ng-show="navbar.user" ng-click="navbar.logout()">
+              <i class="fa fa-sign-out"></i> Sign Out
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  </div>
+
+<!-- 	<p id="myPara">First jQuery</p> -->
+<!-- 	<button id="btnClick">Click Me!!!</button> -->
+	
+	<div>
+	    <div class="lp_splash_container">
+			<div class="splash_tagline">
+	        	<br><br>
+		       	 Welcome to the DTSS Web Hosting Portal.<br>
+		        <span>A centralized experience for Disney technology hosting services.</span>
+	   		</div>
+	   	</div>
+	   	
+	   	<div class="overlay-text">
+			<br>
+				<span>The design of the web hosting portal is meant to enable you to</span>
+			<br>
+			<div class="overlay-block"><span>INFORM</span><br>Stay informed on current DTSS resources available to host your applications and services.</div>
+			<div class="overlay-block"><span>ACT</span><br>Act using relevant information provided to help you make hosting decisions.</div>
+			<div class="overlay-block"><span>MANAGE</span><br>Manage all your hosting resources in one place.</div>
+        </div>
+        
+        <div class="overlay-background">&nbsp;</div>
+        
+        <div class="home-centered-blocks centered-blocks text-center">
+    	<div class="row">
+    		<div class="col-xs-4">
+    		<a class="no-decoration" ui-sref="products.overview">
+    				<img src="images/hosting_lp.png">
+    			<h2>Products</h2>
+    			<p>
+               Stay informed on current DTSS resources available to host your applications and services. Act using relevant information provided to help you make hosting decisions.
+                </p>
+    		</a>
+    		
+    		</div>
+				<div class="col-xs-4">
+  			  <a class="no-decoration">
+  			  	  <img src="images/analytics_lp.png">
+    					<h2>Analytics</h2>
+    					<p>
+                The new Analytics tool built by DTSS is a great resource to gain real-time operational intelligence on your live hosting deployments across the organization. 
+                </p>
+					</a>
+   			
+    		</div>
+    		<div class="col-xs-4">
+    			<img src="images/resources_lp.png">
+    			 	<h2>Resources</h2>
+    			 	 <p>
+               The DTSS Resources center provides continuously-updated training and support resources to help you with your projects. 
+                </p>
+    		</div>    		
+    	</div>
+    </div>
+        
+   	</div>
+</body>
+</html>
