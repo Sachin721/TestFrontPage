@@ -1,0 +1,61 @@
+<table id="jsonTable" class="table table-bordered table-hover">
+</table>
+
+///js///////////
+
+var jsonResult=[
+  {
+    "Model": "Iphone 18",
+    "Name": "iOS",
+    "Share": 57.56,
+    "Price Range": "$800 - $1000",
+    "Brand": "Apple"
+  },
+  {
+    "Model": "Nexus 23",
+    "Name": "Android",
+    "Share": 24.66,
+    "Price Range": "$600 - $800",
+    "Brand": "Samsung"
+  },
+  {
+    "Model": "Tom-tom",
+    "Name": "Java ME",
+    "Share": 10.72,
+    "Price Range": "$200 - $900",
+    "Brand": "X Brand"
+  }
+]
+
+var selectRow= {
+		Model:$('<select/>'),
+		Name:$('<select/>'),
+		Share:$('<select/>'),
+		PriceRange:$('<select/>'),
+		Brand:$('<select/>')
+};
+
+//select boxes at the top
+$.each(jsonResult,function(index,item){
+    selectRow.Model.append('<option>'+item.Model+'</option>');
+    selectRow.Name.append('<option>'+item.Name+'</option>');
+    selectRow.Share.append('<option>'+item.Share+'</option>');
+    selectRow.PriceRange.append('<option>'+item["Price Range"]+'</option>');
+    selectRow.Brand.append('<option>'+item.Brand+'</option>');
+});
+
+var dropdownRow= '<tr><th>'+selectRow.Model[0].outerHTML+'</th><th>'+selectRow.Name[0].outerHTML+'</th><th>'+selectRow.Share[0].outerHTML+'</th><th>'+selectRow.PriceRange[0].outerHTML+'</th><th>'+selectRow.Brand[0].outerHTML+'</th></tr>'
+
+var rowArray=new Array();
+rowArray.push(dropdownRow);
+var headerRow= '<tr><th>Model</th><th>Name</th><th>Share</th><th>Price Range</th><th>Brand</th></tr>';
+rowArray.push(headerRow);
+$.each(jsonResult,function(index,item){
+  row=$("<tr/>");
+   		 $.each(item,function(inx,el){
+   		 $(row).append('<td>'+el+'</td>');
+    });
+	rowArray.push(row);
+})
+
+$('table').html(rowArray);
